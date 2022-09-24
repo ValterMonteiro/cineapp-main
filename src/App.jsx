@@ -1,13 +1,19 @@
-import { Button } from "./components/Button"
+import { Container } from './components/Container'
+import { NavMenu } from './components/NavMenu'
+import { Search } from './components/Search'
+import { Home } from './pages/Home'
+import './styles/globalStyle.css'
 
 function App() {
-  let nome = "APP"
+  
   return (
     <div className="App">
-      <h1>{nome}</h1>
-      <Button text="Confirmar" variant="danger" />
-      <Button text="OK" variant="success" />
-      <Button text="Delete" />
+      <>
+        <Container>
+          <Home/>          
+          <NavMenu/>
+        </Container>
+      </>
     </div>
   )
 }

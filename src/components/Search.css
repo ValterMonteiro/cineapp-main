@@ -1,0 +1,18 @@
+.search-container{
+    position: relative;
+}
+.search-container input{
+    background: #2C2250;
+    border-radius: 10px;
+    border: 0;
+    padding: 15px 15px 15px 40px;
+    width: 100%;
+    outline: none;
+    color: white;
+}
+
+.search-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
