@@ -1,0 +1,7 @@
+.MovieCard{
+    width: 100px;
+ }
+ .MovieCard img{
+     width: 100%;
+     border-radius: 8px;
+ }
