@@ -1,11 +1,13 @@
 import { House, Ticket, User } from 'phosphor-react'
+import {Link} from 'react-router-dom'
 import './NavMenu.css'
-export function NavMenu(){
-    return(
+export function NavMenu() {
+
+    return (
         <nav className="navMenu">
-            <a href="#"><House size={20}/></a>
-            <a href="#"><Ticket size={20}/></a>
-            <a href="#"><User size={20}/></a>
+            <Link to='/'><House size={20} /></Link>
+            <a href="#"><Ticket size={20} /></a>
+            <a href="#"><User size={20}  /></a>
         </nav>
     )
 }

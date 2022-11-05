@@ -1,24 +1,28 @@
-
 import { useEffect, useState } from 'react'
+import './MovieList.css'
 import { getMovies } from '../services/api'
 import { MovieCard } from './MovieCard'
-import './MovieList.css'
 import { Search } from './Search'
-export function MovieList(){
-    const [movies, setMovies] = useState([]) //definição de estado
-    
-    useEffect(()=>{
-        const getDataApi = async ()=>{
+export function MovieList() {
+    const [movies, setMovies] = useState([])
+
+    const [search, setSearch] = useState("")
+
+    useEffect(() => {
+        const getDataApi = async () => {
             setMovies(await getMovies())
         }
         getDataApi()
-    },[])
-    return(
+    }, [])
+    return (
         <>
-            <Search/>
+            <Search setSearch={setSearch}/>
             <div className="MovieList">
-                {movies.map(movie=><MovieCard key={movie.id} movie={movie}/>)}
-            </div> 
+                {
+                movies
+                .filter((movie)=>movie.title.toLowerCase().includes(search.toLowerCase()))                
+                .map(movie => <MovieCard key={movie.id} movie={movie} />)}
+            </div>
         </>
     )
 }

@@ -8,10 +8,9 @@ html,body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
-
 h1{
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
+    color: white;
     font-size: 18px;
     font-weight: 700;
 }

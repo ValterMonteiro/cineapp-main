@@ -1,11 +1,11 @@
+import { Link } from 'react-router-dom'
 import './MovieCard.css'
-import { link } from 'react-router-dom'
 export function MovieCard({ movie }) {
     return (
-        <link to={`/movie-details/${movie.id}`}>
+        <Link to={`/movie-details/${movie.id}`}>
             <article className="MovieCard">
-                <img src={movie.images.poster} alt="" />
+                <img src={movie.images.poster} />
             </article>
-        </link>
+        </Link>
     )
 }
