@@ -9,6 +9,6 @@ export async function getMovies(){
     return response.data
 }
 export async function getMovieInfo(id){
-    let response = await api.get(`movies/${id}`)
+    let response = await api.get(`movies/${id}/?_embed=sessions`)
     return response.data
 }

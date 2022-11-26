@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion"
 import './MovieCard.css'
 export function MovieCard({ movie }) {
     return (
         <Link to={`/movie-details/${movie.id}`}>
-            <article className="MovieCard">
+            <motion.article layout className="MovieCard">
                 <img src={movie.images.poster} />
-            </article>
+            </motion.article>
         </Link>
     )
 }

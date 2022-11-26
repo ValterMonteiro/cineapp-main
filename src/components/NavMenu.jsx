@@ -1,5 +1,6 @@
 import { House, Ticket, User } from 'phosphor-react'
 import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
 
 const Nav = styled.nav`
@@ -21,7 +22,7 @@ export function NavMenu() {
         <Nav>
             <Link to='/'><House size={20} /></Link>
             <a href="#"><Ticket size={20} /></a>
-            <a href="#"><User size={20} /></a>
+            <a href="#"><User size={20}  /></a>
         </Nav>
     )
 }
